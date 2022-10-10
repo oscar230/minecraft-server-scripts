@@ -20,7 +20,7 @@ $ (crontab -l ; echo "0 9 * * * mcrcon -p PaSsWoRd -w 10 save-all stop && ~/upda
 Remember to [enable rcon](https://github.com/Tiiffi/mcrcon#enable-rcon-on-server), if youre using a remote game server look for the [`-H` option](https://github.com/Tiiffi/mcrcon#usage). You can edit your crontab using `EDITOR=vim crontab -e`.
 
 ## Server [systemd service](https://wiki.archlinux.org/title/systemd)
-Based on [the service](https://gist.github.com/dotStart/ea0455714a0942474635#file-minecraft-service) written by [dotStart](https://gist.github.com/dotStart). Remember to edit `User=minecraft` to reflect your current user... psst `whoami`. Place this service in `/etc/systemd/system/minecraft.service`, start and enable it with `sudo systemctl daemon-reload && sudo systemctl enable minecraft.service --now`.
+Based on [the service](https://gist.github.com/dotStart/ea0455714a0942474635#file-minecraft-service) written by [dotStart](https://gist.github.com/dotStart) and [this article by Enauts Thinking](https://teilgedanken.de/Blog/post/setting-up-a-minecraft-server-using-systemd/). Remember to edit `User=minecraft` to reflect your current user... psst `whoami`. Place this service in `/etc/systemd/system/minecraft.service`, start and enable it with `sudo systemctl daemon-reload && sudo systemctl enable minecraft.service --now`.
 ```
 [Unit]
 Description=Minecraft Server
