@@ -4,8 +4,9 @@ _Useful scripts for operating a Minecraft server on UNIX, written in SH for the 
 ## Update server
 Run using `./update-server.sh`.
 
-Install script:
+Install dependencies and the script (_coreutil_ is for the `sha1sum` command):
 ```
+$ sudo pacman -S curl jq coreutils
 $ curl https://raw.githubusercontent.com/oscar230/minecraft-server-scripts/main/update-server.sh > update-server.sh
 $ chmod +x update-server.sh
 ```
