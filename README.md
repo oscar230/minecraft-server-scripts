@@ -14,6 +14,6 @@ Setup for autorun at [09:00 every day](https://crontab.guru/#0_9_*_*_*) using [m
 ```
 $ sudo pacman -S cronie
 $ sudo systemctl enable cronie.service --now
-$ (crontab -l ; echo "0 9 * * * mcrcon -p PaSsWoRd -w 10 save-all stop && ~/update-server.sh && mcrcon -p PaSsWoRd -w 10 start") | crontab -
+$ (crontab -l ; echo "0 9 * * * mcrcon -p PaSsWoRd -w 10 save-all stop && ~/update-server.sh && mcrcon -p PaSsWoRd start") | crontab -
 ```
 Remember to [enable rcon](https://github.com/Tiiffi/mcrcon#enable-rcon-on-server), if youre using a remote game server look for the [`-H` option](https://github.com/Tiiffi/mcrcon#usage). You can edit your crontab using `EDITOR=vim crontab -e`.
