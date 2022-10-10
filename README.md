@@ -32,7 +32,8 @@ User=minecraft
 WorkingDirectory=/opt/minecraft
 
 # You can customize the maximum amount of memory as well as the JVM flags here
-ExecStart=/usr/bin/java -XX:+UseG1GC -Xmx2G -jar server.jar --noconsole
+ExecStart=/usr/bin/java -XX:+UseG1GC -Xmx2G -jar server.jar
+ExecStop=/var/minecraft/mcrcon -p PaSsWoRd stop
 
 # Restart the server when it is stopped or crashed
 Restart=always
